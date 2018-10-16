@@ -1,0 +1,66 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#先载入先启动配置文件
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        #标记表示已启用远程配置。默认为true; #是否使用配置中心配置
+        enabled: true
+        #配置config server的应用的名字
+        service-id: config
+      #配置环境名
+      profile: dev
+    stream:
+      bindings:
+        myMessage:
+          #分组 解决集群情况下被重复消费问题
+          group: order
+          #序列化消息队列消息
+          content-type: application/json
+  redis:
+    port: 6379
+    host: localhost
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      #采样率 应采样的请求百分比。例如1.0 - 100％的请求应该被抽样。精度仅为全数（即不支持0.1％的痕迹）。
+      probability: 1.0
+#      如果为true，则生成128位跟踪ID，而不是64位跟踪ID。
+#    trace-id128: true
+  zipkin:
+      #服务端地址
+    base-url: http://localhost:9411/ # 指定了 Zipkin 服务器的地址
+    sender:
+      type: web #zipkin, 如果项目里引入了RabbitMQ依赖仍希望使用http方式发送数据，增加配置-大坑!
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000 #配置超时时间配置
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1500 #配置特定的方法超时时间配置
+feign:
+  hystrix:
+    #配置feign开启hystrix
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000  #c
+        readTimeout: 5000 #
+        loggerLevel: basic  #
+logging:
+  level:
+    org.springframework.cloud.openfeign.FeignClient: debug

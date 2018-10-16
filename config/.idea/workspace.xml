@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="25314d60-5a26-4a3f-8a3c-856e5bc9c4ee" name="Default" comment="config配置文件恢复">
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/config/ZuulConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/consant/CookieCons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/consant/RedisCons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/exception/RateLimitException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/filter/AddResponseHeaderFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/filter/AuthBuyerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/filter/AuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/filter/AuthSellerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/filter/RateLimiterFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/utils/CookieUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/java/com/lanpang/apigateway/utils/KeyUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eureka/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/HystrixController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/UrlController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/message/MqReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/message/ProductInfoReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/message/StreamClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/message/StreamReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../product/server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/consant/CookieCons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/consant/RedisCons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/dataobject/ResultVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/dataobject/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/enums/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/enums/RoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/service/impl/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/utils/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/java/com/lanpang/server/utils/ResultUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eureka/src/test/java/com/lanpang/eureka/EurekaApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/ServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/VO/ResultVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/VO/ResultVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/EnvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/EnvController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/converter/OrderForm2OrderDTOConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/converter/OrderForm2OrderDTOConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/OrderMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/OrderMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/ProductCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/ProductInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dataobject/mapper/ProductCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dto/CartDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dto/CartDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/dto/OrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/OrderStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/OrderStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/PayStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/PayStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/ProductStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/ProductStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/enums/ResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/exception/SellException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/exception/SellException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/form/CategoryForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/form/CategoryForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/form/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/form/OrderForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/form/ProductForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/form/ProductForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/CookieUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/EnumUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/EnumUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/KeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/KeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/MathUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/serializer/Date2LongSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/java/com/lanpang/server/utils/serializer/Date2LongSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order/server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../order/server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/client/src/main/java/com/lanpang/client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/client/src/main/java/com/lanpang/client/ProductClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/common/src/main/java/com/lanpang/common/ProductInfoOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/common/src/main/java/com/lanpang/common/ProductInfoOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/VO/ResultVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/VO/ResultVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/OrderMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/OrderMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/ProductCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/ProductCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dataobject/ProductInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dto/CartDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dto/CartDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/dto/OrderDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/OrderStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/OrderStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/PayStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/PayStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/ProductStatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/ProductStatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/enums/ResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/exception/ResponseBankException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/exception/ResponseBankException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/exception/SellException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/exception/SellException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/repository/ProductCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/repository/ProductCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/CookieUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/EnumUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/EnumUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/KeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/KeyUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product/server/src/main/java/com/lanpang/server/utils/MathUtil.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>setEnvironment</find>
+      <find>setAppname</find>
+      <find>name</find>
+      <find>spring.application.name</find>
+      <find>parseAddresses</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="656823e5963a8e62fbab398600d2b88ea79406c6" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\work\maven\maven-jar" />
+        <option name="mavenHome" value="F:/work/maven/apache-maven-3.5.2" />
+        <option name="userSettingsFile" value="F:\work\maven\apache-maven-3.5.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="config" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="160" />
+    <option name="height" value="39" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="config" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="config" type="b2602c69:ProjectViewProjectNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="F:/学习/学习视频/cloud点餐/imooc-Spring Cloud微服务实战/learn-sc-master" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\spring boot\SpringCloud_mysell\config\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lanpang.config.ConfigApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="8080" />
+        </param>
+      </additionalParameters>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\85416\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25314d60-5a26-4a3f-8a3c-856e5bc9c4ee" name="Default" comment="" />
+      <created>1537144319981</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537144319981</updated>
+      <workItem from="1537144324635" duration="1145000" />
+      <workItem from="1537145489631" duration="24298000" />
+      <workItem from="1537235858694" duration="609000" />
+      <workItem from="1537317085984" duration="2831000" />
+      <workItem from="1537429548864" duration="67000" />
+      <workItem from="1537431583537" duration="600000" />
+      <workItem from="1537435527827" duration="10857000" />
+      <workItem from="1537511598002" duration="1613000" />
+      <workItem from="1537836341614" duration="3051000" />
+      <workItem from="1538107203588" duration="1177000" />
+      <workItem from="1538978189622" duration="9138000" />
+      <workItem from="1539218468737" duration="744000" />
+      <workItem from="1539323407935" duration="2092000" />
+    </task>
+    <task id="LOCAL-00001" summary="config配置文件恢复">
+      <created>1537497810753</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537497810753</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58222000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980332" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info id="Structure" order="1" sideWeight="0.502994" side_tool="true" weight="0.19591528" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39863715" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32879046" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.36286202" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39182281" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32879046" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.35775128" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497006" visible="true" weight="0.21633889" />
+      <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info id="Web" order="3" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/basedir" />
+    </ignored-roots>
+    <MESSAGE value="config配置文件恢复" />
+    <option name="LAST_COMMIT_MESSAGE" value="config配置文件恢复" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.0.1.RELEASE/spring-cloud-netflix-eureka-client-2.0.1.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java</url>
+          <line>328</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.0.0.RELEASE/spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar!/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.class</url>
+          <line>116</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.0.0.RELEASE/spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar!/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.class</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.4.RELEASE/spring-boot-2.0.4.RELEASE.jar!/org/springframework/boot/context/ContextIdApplicationContextInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.4.RELEASE/spring-boot-2.0.4.RELEASE.jar!/org/springframework/boot/context/ContextIdApplicationContextInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw" />
+    <entry file="file://$PROJECT_DIR$/mvnw.cmd" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.0.1.RELEASE/spring-cloud-netflix-eureka-client-2.0.1.RELEASE-sources.jar!/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+          <folding>
+            <element signature="e#12661#12662#0" expanded="true" />
+            <element signature="e#12690#12691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.8.RELEASE/spring-context-5.0.8.RELEASE.jar!/org/springframework/context/support/ApplicationContextAwareProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.4.RELEASE/spring-boot-2.0.4.RELEASE.jar!/org/springframework/boot/context/properties/bind/JavaBeanBinder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.4.RELEASE/spring-boot-2.0.4.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="383" column="78" selection-start-line="383" selection-start-column="78" selection-end-line="383" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-config-server/2.0.0.RELEASE/spring-cloud-config-server-2.0.0.RELEASE.jar!/org/springframework/cloud/config/server/environment/MultipleJGitEnvironmentProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-eureka-client/2.0.0.RELEASE/spring-cloud-netflix-eureka-client-2.0.0.RELEASE.jar!/org/springframework/cloud/netflix/eureka/EurekaInstanceConfigBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="147" selection-start-line="147" selection-end-line="147" />
+          <folding>
+            <element signature="e#5216#5217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.4.RELEASE/spring-boot-2.0.4.RELEASE.jar!/org/springframework/boot/context/ContextIdApplicationContextInitializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.4.RELEASE/spring-boot-autoconfigure-2.0.4.RELEASE.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lanpang/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>config</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shenhailanpangzi/config-repo
+          #配置文件从远端仓库拉取到本地的路径
+          basedir: F:/spring boot/SpringCloud_mysell_parent/basedir
+          username: ShenHaiLanPangZi
+          password: lanpangzi123
+          force-pull: true
+#          非对称加密
+#          username: 'AQCa2yyeVZCkxUvuZJZ2gRXfOSM4CpxDw7abqea1guJHXOcMDvoVJsEkd+ag48wJobqcacIGnLi0BIDOF+kSKEyDAZ+9rY7thf3tKwuibXxE+nH2858t5eUJmmzi53yOr75E7z/517qZSN7PZ9jzkDy7kam6RjCfxDzUDwC6atDjeXtakmn/1S71iMH/Ap1Djbh+jMH4E5e/IQ739eXvRpD9MOKDCbelGzmEDHQQ7YxMEQ1T2yMyGRItvxGcLah7n5fgbQjmxy7jWGJ++I7+bzkP61R3tQYnLy+c6wXNjr+6YnFRDKnkoBqVsrNUuijcu5I5MzUeiaPTRMaRcmMpAju8ZYHN3TwHO85tCBPxHOckfcaC6f6pfEHTdo92ZN/gA0pt3JVH86qFsR4jWg+B3Emj'
+#          password: 'AQChYkl+teknTGI96iMdekv75iZhxCJAOcgw7JM9c3y4gLFTxINF6wpufidmUSUM/M7SOjgtjKtLjo8m6RBrk/CPTIdorv5YzB9Gsorq2WLCFMRprfatcjxy+ZfZXeXp1TYpS5nK1fmikrHMHHQt7gMxiQvxvtS0hz7Ld1rJVQstMEGScavWUwH2St1Wz4m013Rl2iqk72KYxE+p/N9HJxkJg5pa5Gnx2+oGkwVqH2QnsCsGZSXXVthjKhkRSMi61hr/ITDuNtXjiX3cc2oL0gR79gEFxKJYAri5Mz/PVHj09ckrHFQlLkD8td32mJSjYP0++yWs3Nmf6FU1kNVnnUu8vMZ+NjTZtGgZ0Kt9giu+0NpedZnC20YcPLJRHjVr9W0='
+#          对称加密
+#          username: '{cipher}625fca940a5ec2db672fd17108739ac28e91b40595e3aaac1a395f923f39582358c455a44288ab900f05143d75d55cf1'
+#          password: '{cipher}76ad545eaeca81f828f4062d90c43a4d22d6bcbd5ee2b716fddadbcf66369ed2'
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}

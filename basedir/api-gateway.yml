@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: api-gateway
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    data-password: yh
+    data-username: yh
+    url: jdbc:mysql://localhost/yh?characterEncoding=utf-8&useSSL=false #连接mysql忽略ssl安全协议
+  jpa:
+    show-sql: true
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+  redis:
+    port: 6379
+    host: localhost
+env:
+  dev
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    prefer-ip-address: true

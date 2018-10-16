@@ -1,0 +1,38 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#先载入先启动配置文件
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      discovery:
+        #标记表示已启用远程配置。默认为true; #是否使用配置中心配置
+        enabled: true
+        #配置config server的应用的名字
+        service-id: config
+      #配置环境名
+      profile: dev
+zuul:
+  routes:
+#    自定义路由地址 myProduct是路由规则名称 随便写
+    myProduct:
+#      将/myProduct/** 路由到product
+      path: /myProduct/**
+      serviceId: product
+#      敏感头信息，默认过滤"Cookie", "Set-Cookie", "Authorization"，这里将它配置为空
+      sensitiveHeaders:
+#    简单写法
+#    product: /myProduct/**
+#  配置不可访问的地址
+  ignored-patterns:
+    - /product/product/list
+#  全部服务忽略敏感头（全部服务都可传递cookie）
+  sensitive-headers:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh #刷新配置

@@ -1,0 +1,29 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#先载入先启动配置文件
+spring:
+  application:
+    name: product
+  cloud:
+    config:
+      discovery:
+        #标记表示已启用远程配置。默认为true; #是否使用配置中心配置
+        enabled: true
+        #配置config server的应用的名字
+        service-id: config
+      #配置环境名
+      profile: dev
+  zipkin:
+    #服务端地址
+    base-url: http://localhost:9411
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      #采样率 应采样的请求百分比。例如1.0 - 100％的请求应该被抽样。精度仅为全数（即不支持0.1％的痕迹）。
+      probability: 1
+logging:
+  level:
+    org.springframework.cloud.openfeign.FeignClient: debug

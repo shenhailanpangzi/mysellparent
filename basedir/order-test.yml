@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    data-password: yh
+    data-username: yh
+    url: jdbc:mysql://localhost/yh?characterEncoding=utf-8&useSSL=false #连接mysql忽略ssl安全协议
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#禁用eureka
+#ribbon:
+#  eureka:
+#    enable: true
+env:
+  test

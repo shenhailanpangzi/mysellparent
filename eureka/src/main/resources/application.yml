@@ -1,0 +1,36 @@
+#eureka:
+#  instance:
+##    注册中心里面的客户端实例IP显示不正确 因为 Spring Cloud 获取服务客户端 IP 地址配置变更了。
+##    升级前：${spring.cloud.client.ipAddress}升级后：${spring.cloud.client.ip-address}
+##    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+#    instanceId: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      #配置注册的地址
+#      defaultZone: http://localhost:8761/eureka/
+#      #配置不注册自己 默认true
+#    register-with-eureka: false
+#  server:
+#    #配置是否开启自我保护机制 只能在开发环境关闭
+#    enable-self-preservation: false
+##    清理间隔时间单位毫秒 默认60*1000
+##    eviction-interval-timer-in-ms: 100
+#spring:
+#  application:
+#    name: eureka
+spring:
+  application:
+    name: eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance: eureka
+#   配置不注册自己 默认true
+    register-with-eureka: false
+#   此客户端是否获取eureka服务器注册表上的注册信息，默认为true
+    fetch-registry: false
+  server:
+#   配置是否开启自我保护机制
+    enable-self-preservation: false

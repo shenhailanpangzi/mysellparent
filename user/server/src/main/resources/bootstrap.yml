@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#先载入先启动配置文件
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      discovery:
+        #标记表示已启用远程配置。默认为true; #是否使用配置中心配置
+        enabled: true
+        #配置config server的应用的名字
+        service-id: config
+      #配置环境名
+      profile: dev

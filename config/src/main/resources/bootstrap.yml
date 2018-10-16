@@ -1,0 +1,6 @@
+encrypt:
+  key-store:
+    alias: config
+    location: config.keystore
+    password: lanpang
+    secret: lanpang
